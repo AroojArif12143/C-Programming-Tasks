@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int flip(){
+    int i = rand() % 2;
+    if (i == 0)
+         return 0;
+    else
+         return 1;
+}
+int main( void )
+{
+    srand(time(0));
+    int side;
+    int toss;
+    int heads = 0;
+    int tails = 0;
+     
+    for ( toss = 1; toss <= 100; toss++ ){
+        if (flip()==0){
+            printf("0 or Tails\n");
+            tails++;
+        }
+        else{
+            printf("1 or Heads\n");
+            heads++;
+        }
+    }
+    printf( "Heads was flipped %d times\n", heads );
+    printf( "Tails was flipped %d times\n", tails );
+    return 0;
+}    

@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main(void){
+    int a[5]={1,2,3,4,5};
+    int *aptr1,*aptr2;
+    
+    aptr1 = a;
+    printf("Current value of array a = %d ",*aptr1);
+    
+    aptr1 = aptr1+2;
+    printf("\nCurrent value of array a = %d ",*aptr1);
+    
+    aptr1 = aptr1+2;
+    printf("\nCurrent value of array a = %d ",*(aptr1+2));
+    
+    aptr1 = aptr1-3;
+    printf("\nCurrent value of array a = %d ",*aptr1);
+
+    aptr2 = &a[4];
+    int x = aptr2-aptr1;
+    printf("\naptr1 is pointing to %d",*aptr1);
+    printf("\naptr2 is pointing to %d",*aptr2);
+    printf("\nthe number of elements from aptr1 to aptr2 = %d",x);
+    
+}

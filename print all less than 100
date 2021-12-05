@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main (void){
+	unsigned int c;
+	 	for(c=1; c<=100; c++)
+	 	{printf("%u\n",c);
+	 	
+		 }
+		 return 0;
+}

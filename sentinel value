@@ -1,0 +1,28 @@
+//obtains series of numbers from the user to calculate average with sentinel value -1 to end program
+
+#include <stdio.h>
+          
+int main(){
+     
+    int n, sum = 0, c, value, avg = 0;
+     
+    printf("Enter '-1' to stop the program.\n");
+    while(n != -1){
+            printf("Enter the number of integers you want to add and find average of: ");
+            scanf("%d", &n);
+            printf("\nNow enter %d integers\n", n);
+     
+            for(c=1; c<=n; c++){
+                     scanf("%d", &value);
+                      sum = sum + value;
+                       }
+     
+                       avg = sum / n;
+     
+                       printf("The sum of these integers is: %d\n", sum);
+                       printf("The average of these integers is: %d\n", avg);
+     
+}
+   
+    return 0;
+    }

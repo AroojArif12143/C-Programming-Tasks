@@ -1,0 +1,25 @@
+//task 3.6
+//determines which of the two user entered numbers is smaller
+#include <stdio.h>
+int main(){
+	int var1, var2;
+	printf("Input the value of var1:");
+	scanf("%d", &var1);
+	printf("Input the value of var2:");
+	scanf("%d", &var2);
+	if (var1 != var2)
+	{
+		
+		if (var1 > var2)
+		{
+			printf("var2 is smaller than var1");
+	}
+		else
+		{
+			printf("var1 is smaller than var2");
+		}
+		}
+		else {
+			printf("Error var1 is equal to var2");
+		}
+	}

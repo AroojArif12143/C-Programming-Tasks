@@ -1,0 +1,82 @@
+#include <stdio.h>
+#include <stdlib.h> //For rand to be used
+
+int main(void)
+{
+  int die1;
+  int die2;
+  int total;
+  double rolls = 36000.00;
+
+  unsigned int freq2= 0; 
+  unsigned int freq3= 0; 
+  unsigned int freq4= 0; 
+  unsigned int freq5= 0; 
+  unsigned int freq6= 0; 
+  unsigned int freq7= 0; 
+  unsigned int freq8= 0; 
+  unsigned int freq9= 0; 
+  unsigned int freq10= 0; 
+  unsigned int freq11= 0;
+  unsigned int freq12= 0; 
+  
+//loop 60mill times & summarize results
+  for (unsigned int roll= 1; roll <= 36000; ++roll) {
+   die1 = 1+rand()%6; 
+   die2 = 1+rand()%6; 
+   total = die1 +die2;
+   
+    //Determine values & increment appropriate counter 
+    switch (total) {
+      
+      case 2: 
+        ++freq2;
+        break;        
+      case 3: 
+        ++freq3;
+        break;        
+      case 4: 
+        ++freq4;
+        break;        
+      case 5: 
+        ++freq5;
+        break;        
+      case 6: 
+        ++freq6;
+        break;         
+      case 7: 
+        ++freq7;
+        break;        
+      case 8: 
+        ++freq8;
+        break;
+      case 9: 
+        ++freq9;
+        break;        
+      case 10: 
+        ++freq10;
+        break;        
+      case 11: 
+        ++freq11;
+        break;        
+      case 12: 
+        ++freq12;
+        break;
+    } //End of switch
+  } //End of for
+  
+  //Display results in tabular format
+  printf("%s%13s%12s\n", "Face", "Frequency", "Rate"); //%13s means 13 spaces over & s for string
+  printf("2%13u%15.2lf\n", freq2, (freq2/rolls)*100);
+  printf("3%13u%15.2lf\n", freq3, (freq3/rolls)*100);
+  printf("4%13u%15.2lf\n", freq4, (freq4/rolls)*100);
+  printf("5%13u%15.2lf\n", freq5, (freq5/rolls)*100);
+  printf("6%13u%15.2lf\n", freq6, (freq6/rolls)*100);
+  printf("7%13u%15.2lf\n", freq7, (freq7/rolls)*100);
+  printf("8%13u%15.2lf\n", freq8, (freq8/rolls)*100);
+  printf("9%13u%15.2lf\n", freq9, (freq9/rolls)*100);
+  printf("10%12u%15.2lf\n", freq10, (freq10/rolls)*100);
+  printf("11%12u%15.2lf\n", freq11, (freq11/rolls)*100);
+  printf("12%12u%15.2lf\n", freq12, (freq12/rolls)*100);
+  
+} 

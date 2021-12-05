@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+double hypotenuse(double x, double y){
+    double z = sqrt((x*x) + (y*y));
+    return z;
+}
+int main(void)
+{
+    double s1 = 3, s2 = 4;
+    double c = hypotenuse(s1, s2);
+    printf("Side 1: %f\nSide 2: %f\nHypotenuse: %f",s1,s2,c);
+    return 0;
+}

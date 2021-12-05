@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+void sum(int *xptr, int *yptr, int *zptr);
+
+int main(void){
+    int a=2, b=3, sum1, i ,sum3;
+    int *aptr, *bptr, *sum1ptr;
+    
+    aptr=&a;
+    bptr=&b;
+    sum1ptr=&sum1;
+    
+    sum1 = *aptr + *bptr;
+    printf("sum of a and b is sum1 = %d",sum1);
+    
+    *sum1ptr = *aptr + *bptr;
+    printf("\nsum of a and b is sum1 = %d",*sum1ptr);
+    
+    sum(&a,&b,&sum1);
+    printf("\nafter modification using pass by reference"
+    "\n\na=%d b=%d sum1=%d",a,b,sum1);
+}
+
+void sum(int *xptr, int *yptr, int *zptr){
+    *xptr = *xptr *2;
+    *yptr = *yptr *2;
+    *zptr = *xptr + *yptr;
+}

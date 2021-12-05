@@ -1,0 +1,15 @@
+//Task 3.5
+//product of 3 numbers
+#include<stdio.h>
+int main() 
+   {
+	int x, y, z, result;
+    printf("\nInput the first integer: "); 
+    scanf("%d", &x);
+    printf("\nInput the second integer: ");
+    scanf("%d", &y);
+     printf("\nInput the third integer: ");
+    scanf("%d", &z);
+    result = x*y*z;
+	printf("Product of the above integers = %d\n", result);
+}

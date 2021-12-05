@@ -1,0 +1,21 @@
+//prints sum, sum of squares and sum of cubes of a given range
+#include<stdio.h>
+#include<conio.h>
+#include<math.h> 
+int main()
+
+{
+    int i,n;
+ 	unsigned int sum = 0;
+    printf("Enter the value of N: ");
+    scanf("%d",&n);
+ 
+    printf("No     Square   Cube    Sum\n",n);
+    for(i=1;i<=n;i++)
+    {
+    	sum = sum + i;
+        printf("%d \t %ld \t %ld \t %d\n",i,(i*i),(i*i*i),sum);
+    }
+     
+    return 0;
+}

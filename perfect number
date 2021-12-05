@@ -1,0 +1,27 @@
+#include<stdio.h>
+void isPerfect(int num){
+	int j,s=0;
+	for(j=1;j<num;++j){
+		if(num%j==0){
+			s=s+j;
+		}
+	}
+	if(s==num){
+		printf("Found perfect number %d ",num);
+		printf("that is indeed sum of: ");
+    	for(j=1;j<num;++j){
+    		if(num%j==0){
+    			s=s+j;
+    			printf("%d, ",j);
+    		}
+    	}
+    	printf("\n");
+	}	
+}
+ 
+int main(){
+    for(int k=1;k<1001;k++){
+        isPerfect(k);
+    }	
+	return 0;
+}

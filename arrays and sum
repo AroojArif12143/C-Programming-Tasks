@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+void printarray(int z[][3]);
+int sum(int z[][3]);
+
+int main(){
+    int a[3][3] = {{11,12,13},{14,15,16},{17,18,19}};
+    printf("Array a is ");
+    printarray(a);
+    
+    int  b[3][3];
+    int c=1,i,j;
+    for(i=0;i<=2;i++){
+        for(j=0;j<=2;j++){
+            b[i][j]=c;
+            c++;
+        }
+    }
+    
+    puts("");
+    printf("Array b is ");
+    printarray(b);
+    printf("\nthe sum is %d",sum(b));
+    
+}
+
+void printarray(int z[][3]){
+    int x,y;
+    for(x=0; x<=2; x++){
+        for(y=0;y<=2;y++){
+            printf("%d ",z[x][y]);
+        }
+    }
+}
+
+int sum(int z[][3]){
+    int x,y,s=0;
+    for(x=0; x<=2; x++){
+        for(y=0; y<=2; y++){
+            s = s+z[x][y];
+        }    
+    }
+    return s;
+}

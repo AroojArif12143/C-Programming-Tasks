@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+	int i, j, k, m;
+	i=5;
+	j=7;
+	k=4;
+	m=-2;
+	
+	printf("i=%d j=%d k=%d m=%d\n\n",i,j,k,m);
+	printf("i == 5: %d\n\n", i==5);
+	printf("i != 3: %d\n\n", j!=5);
+	printf("i>=5 && j<4: %d\n\n", i>=5 && j<4);
+	printf("!m && k > m: &d\n\n", !m && k > m);
+	printf("!k || m: %d\n\n", !k || m);
+	printf("k - m < j || 5 - j >= k: %d\n\n", k - m < j || 5-j >= k);
+	printf("j + m <= i && !0: %d\n\n", j + m <= i && !0);
+	printf("!(j-m): %d\n\n", !(j-m));
+	printf("!(k>m): %d\n\n", !(k>m));
+	printf("!(j>k): %d", !(j>k));
+	return 0;
+}
